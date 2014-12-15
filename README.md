@@ -32,3 +32,7 @@ Technologies
     Enrique Urbina
     Juan Venegas
     Moises Martinez
+    
+  Designer
+  
+    Elsenora Palacios
