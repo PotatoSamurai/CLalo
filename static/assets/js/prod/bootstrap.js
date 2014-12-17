@@ -1,0 +1,1 @@
+define(["require","angular","app"],function(require,ng){"use strict";ng.bootstrap(document,["app"])});
