@@ -1,4 +1,4 @@
-<html>
+<html ng-controller="main-ctrl">
   <head>
     <!--Import materialize.css-->
     <!-- <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='assets/css/materialize.css') }}"  media="screen,projection"/> -->
@@ -6,9 +6,18 @@
   </head>
 
   <body ng-controller="main-ctrl">
-    <div class="container">
-      <h1>The {[{title}]}</h1>
-    </div>
+    <header>
+      <ng-include src="'static/views/includes/nav.html'"></ng-include>
+    </header>
+    <main>
+      <div class="container">
+        <h1>The {[{title}]}</h1>
+        <ng-view></ng-view>
+      </div>
+    </main>
+    <footer>
+      <!-- <ng-include src="'view/inc/footer.html'"></ng-include> -->
+    </footer>
     <!--<script type="text/javascript" data-main="{{ url_for('static', filename='assets/js/main.js') }}" src="//cdnjs.cloudflare.com/ajax/libs/require.js/2.1.15/require.min.js"></script> -->
     <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script type="text/javascript" src="static/assets/js/dev/materialize.js"></script>

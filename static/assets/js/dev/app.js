@@ -16,26 +16,14 @@ define([
 
 	app.config(['$routeProvider', '$locationProvider', '$interpolateProvider',function ($routeProvider, $locationProvider,$interpolateProvider) {
 
-		// $routeProvider
-		// 	.when('/', {
-		// 		templateUrl: 'view/home/'
-		// 	}).when('/about', {
-		// 		templateUrl: 'view/about/'
-		// 	})
-		// 	// .when('/chat', {
-		// 	// 	templateUrl: 'view/chat/'
-		// 	// }).when('/faq', {
-		// 	// 	templateUrl: 'view/faq/'
-		// 	// }).when('/forum', {
-		// 	// 	templateUrl: 'view/forum/'
-		// 	// }).when('/help', {
-		// 	// 	templateUrl: 'view/help/'
-		// 	// })
-		// 	.when('/404', {
-		// 		templateUrl: 'view/404/'
-		// 	}).otherwise({
-		// 		redirectTo: '/404'
-		// });
+		$routeProvider
+			.when('/', {
+				templateUrl: 'static/views/home/index.html'
+			}).when('/#404', {
+				templateUrl: 'static/views/404/index.html'
+			}).otherwise({
+				redirectTo: '/#404'
+		});
 
 		$interpolateProvider.startSymbol('{[{').endSymbol('}]}');
 
