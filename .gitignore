@@ -1,3 +1,13 @@
 node_modules
 .npm-debug.log
 tmp
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+# C extensions
+*.so
+
+#sass
+.sass-cache
+*.css.map
