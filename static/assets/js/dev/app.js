@@ -6,14 +6,13 @@
 define([
 	'angular',
 	'angular-route',
-
+	'./directives/index',
 	'./controllers/index',
-	'./services/index',
-	'materialize'
+	'./services/index'
 ], function (angular) {
 	'use strict';
 
-	var app = angular.module('app', ['ngRoute','app.controllers','app.services']);
+	var app = angular.module('app', ['ngRoute','app.directives','app.controllers','app.services']);
 
 	app.config(['$routeProvider', '$locationProvider', '$interpolateProvider',function ($routeProvider, $locationProvider,$interpolateProvider) {
 
@@ -39,7 +38,7 @@ define([
 		// });
 
 		$interpolateProvider.startSymbol('{[{').endSymbol('}]}');
-		
+
 		// use the HTML5 History API
 		$locationProvider.html5Mode(false);
 	}]);

@@ -15,7 +15,7 @@
 // 	Require: If you just want to load and use stuff.
 
 require.config({
-	baseUrl: "static/assets/js/",
+	baseUrl: "static/assets/js/dev",
 	paths: {
 		// The Libraries we use
 		'angular': [
@@ -27,15 +27,11 @@ require.config({
 		'domReady': [
 			'http://cdnjs.cloudflare.com/ajax/libs/require-domReady/2.0.1/domReady.min' //CDNJS
 		],
-		'jquery' : [
-			'http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min'  //CDNJS
-		],
 		'hammerjs': [
 			'http://cdnjs.cloudflare.com/ajax/libs/hammer.js/1.1.3/hammer'  //CDNJS
 		],
 		'app': 		'app',
-		'bootstrap':'bootstrap',
-		'materialize' : 'materialize'
+		'bootstrap':'bootstrap'
 	},
 	shim: {
 		'angular': {
@@ -43,8 +39,7 @@ require.config({
 				},
 		'angular-route': {
             deps: ['angular']
-        },
-		'materialize': ['jquery','hammerjs']
+        }
 	},
 	deps: [
 		// kick start application...
